@@ -45,9 +45,30 @@
         </div>
     @endif
     </div>
+    <div >    
+         <div><p><a href="#" class="btn btn-primary" role="button">Previos</a> <a href="#" class="btn btn-default" role="button">Next</a></p></div>
 
-    {!! Form::submit(trans('quickadmin.submit_quiz'), ['class' => 'btn btn-danger']) !!}
-    {!! Form::close() !!}
+
+
+         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="First group"> 
+                <button type="button" class="btn btn-default">1</button> 
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button> 
+                <button type="button" class="btn btn-default">4</button> 
+                <button type="button" class="btn btn-default">5</button>
+                <button type="button" class="btn btn-default">6</button>
+                <button type="button" class="btn btn-default">7</button>
+                <button type="button" class="btn btn-default">8</button>
+                <button type="button" class="btn btn-default">9</button>
+                <button type="button" class="btn btn-default">10</button>
+           </div>
+         </div> 
+
+
+        {!! Form::submit(trans('quickadmin.submit_quiz'), ['class' => 'btn btn-danger']) !!}
+        {!! Form::close() !!}
+    </div>
 @stop
 
 @section('javascript')

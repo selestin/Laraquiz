@@ -26,14 +26,16 @@
 
                           <div class="col-sm-6 col-md-4">
                             <div class="thumbnail">
-                              <img src="https://i2.wp.com/www.felight.com/wp-content/uploads/2016/12/Quantitative-Aptitude_at_felight.png" alt="...">
+
+                            <a href="{{ route('tests.show',[$topic->id]) }}" class="btn btn-xs btn-primary">
+                              <img src="https://i2.wp.com/www.felight.com/wp-content/uploads/2016/12/Quantitative-Aptitude_at_felight.png" alt="..."></a>
                               <div class="caption">
                                 <h2 style="min-height: 51px;">
 
 
-                               
+                                <a href="{{ route('tests.show',[$topic->id]) }}" class="btn btn-xs btn-primary"> {{ $topic->title }}</a>
 
-                                <a href="{{ route('tests.index',[$topic->id]) }}" class="btn btn-xs btn-primary"> {{ $topic->title }}</a>
+                               
 
 
                                 </h2>

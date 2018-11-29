@@ -55,6 +55,32 @@ class TestsController extends Controller
         return view('tests.index', compact('topics'));
     }
 
+    public function show($id)
+    {
+        /*$test = Test::find($id)->load('user');
+
+        if ($test) {
+            $results = TestAnswer::where('test_id', $id)
+                ->with('question')
+                ->with('question.options')
+                ->get()
+            ;
+        }
+
+        return view('results.show', compact('test', 'results')); */
+
+         $questions = Question::inRandomOrder()
+                            ->where('topic_id', '=', $id)
+                            ->limit(10)
+                            ->get();
+        foreach ($questions as &$question) {
+            $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
+        }
+        return view('tests.create', compact('questions'));
+
+
+    }
+
    
 
 
